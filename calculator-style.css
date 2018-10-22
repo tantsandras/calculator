@@ -28,7 +28,7 @@ body {
   "footer footer footer footer";
 }
 
-#calculator-screen {
+#display {
     box-sizing: border-box;
     grid-area: header;
     grid-row-start: 1;
@@ -95,7 +95,7 @@ button#zero {
     margin: 4px, 6px;  
 }
 
-button#all-clear {
+button#clear {
     background-color: rgb(59, 11, 11);
     grid-area: footer;
     width: 220%;
@@ -121,7 +121,7 @@ button#zero:hover {
     color: white;
 }
 
-button#all-clear:hover {
+button#clear:hover {
     background-color: rgb(49, 45, 45);
     color: white;
 }
