@@ -1,0 +1,103 @@
+body {
+  background: #ffffff;
+  margin: 0;
+  font-size: 62.5%;
+}
+
+#calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(6, 50px);
+    grid-gap: 10px;
+    padding: 20px;
+    grid-template-areas: 
+  "header header header header" 
+  "main main main main" 
+  "main main main main" 
+  "main main main main" 
+  "main main main main" 
+  "footer footer footer footer";
+}
+
+#calculator-screen {
+    box-sizing: border-box;
+    grid-area: header;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column: span 4;
+    display: block;
+    width: 100%;
+    font-size: 4rem;
+    height: 80px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px, 6px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(49, 45, 45);
+    color: white;
+}
+button#zero {
+    background-color: black;
+    grid-area: footer;
+    width: 50%;
+    border: none;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px, 6px;  
+}
+
+button#all-clear {
+    background-color: rgb(59, 11, 11);
+    grid-area: footer;
+    width: 50%;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: last-line;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px, 6px;  
+}
+
+button#all-clear:hover {
+    background-color: rgb(49, 45, 45);
+    color: white;
+}
